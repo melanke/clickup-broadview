@@ -13,6 +13,7 @@ function App() {
           <ApiKeyInput />
         </div>
         <WorkspaceList />
+        <p className="text-sm text-gray-500">V0.1.0</p>
       </div>
     </QueryClientProvider>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSpaces } from "../data/clickup.ts";
 import { FaChevronRight } from "react-icons/fa";
-import FolderList from "./FolderList";
+import FolderList from "./FolderList.tsx";
 
 interface SpaceListProps {
   workspaceId: string;
@@ -29,7 +29,7 @@ const SpaceList: React.FC<SpaceListProps> = ({
         setExpandedSpaceIds(spaces?.map((s) => s.id) || []);
       }
     } else {
-      setExpandedSpaceIds((prev) =>
+      setExpandedSpaceIds((prev: string[]) =>
         prev.includes(spaceId)
           ? prev.filter((id) => id !== spaceId)
           : [...prev, spaceId]

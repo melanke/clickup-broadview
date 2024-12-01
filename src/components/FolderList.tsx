@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useFolders } from "../data/clickup.ts";
 import { FaChevronRight } from "react-icons/fa";
-import ListList from "./ListList";
+import ListList from "./ListList.tsx";
 
 interface FolderListProps {
   spaceId: string;
@@ -21,7 +21,7 @@ const FolderList: React.FC<FolderListProps> = ({
         setExpandedFolderIds(folders?.map((f) => f.id) || []);
       }
     } else {
-      setExpandedFolderIds((prev) =>
+      setExpandedFolderIds((prev: string[]) =>
         prev.includes(folderId)
           ? prev.filter((id) => id !== folderId)
           : [...prev, folderId]

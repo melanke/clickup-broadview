@@ -2,7 +2,8 @@
   "homepage": "https://melanke.github.io/clickup-broadview",
   "tasks": {
     "dev": "deno run -A --node-modules-dir=auto npm:vite",
-    "build": "deno run -A --node-modules-dir=auto npm:vite build"
+    "build": "deno run -A --node-modules-dir=auto npm:vite build",
+    "preview": "deno run -A --node-modules-dir=auto npm:vite preview"
   },
   "imports": {
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useWorkspaces } from "../data/clickup.ts";
 import { FaChevronRight } from "react-icons/fa";
-import SpaceList from "./SpaceList";
+import SpaceList from "./SpaceList.tsx";
 
 const WorkspaceList: React.FC = () => {
   const { data: workspaces, isLoading, error } = useWorkspaces();

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import { Task, useTasks } from "../data/clickup.ts";
 import { FaChevronRight, FaExternalLinkAlt } from "react-icons/fa";
 

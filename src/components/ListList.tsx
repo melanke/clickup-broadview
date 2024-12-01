@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLists } from "../data/clickup.ts";
 import { FaChevronRight } from "react-icons/fa";
-import TaskList from "./TaskList";
+import TaskList from "./TaskList.tsx";
 
 interface ListListProps {
   folderId: string;
@@ -27,7 +27,7 @@ const ListList: React.FC<ListListProps> = ({ folderId }: ListListProps) => {
         setExpandedListIds(lists?.map((l) => l.id) || []);
       }
     } else {
-      setExpandedListIds((prev) =>
+      setExpandedListIds((prev: string[]) =>
         prev.includes(listId)
           ? prev.filter((id) => id !== listId)
           : [...prev, listId]

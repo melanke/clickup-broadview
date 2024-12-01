@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           deno --version
-          deno install --unstable --allow-read --allow-write --allow-net --allow-env --allow-run --global
+          deno install
 
       - name: Build project
         run: deno task build
